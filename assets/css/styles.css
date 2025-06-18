@@ -702,9 +702,9 @@ button{
 /* Maskot 2: kecil, kiri bawah */
 .footer__img-two {
   position: absolute;
-  width: 120px;
-  bottom: 2rem;
-  left: 1.5rem;
+  width: 185 px;
+  bottom: 3rem;
+  right: 3rem;
   transition: 0.3s;
 }
 
