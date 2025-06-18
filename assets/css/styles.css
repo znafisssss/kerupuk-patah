@@ -617,103 +617,121 @@ button{
 }
 
 /*=============== FOOTER ===============*/
-.footer{
+.footer {
   position: relative;
   overflow: hidden;
 }
 
+.footer__container {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Logo dan Deskripsi */
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+.footer__logo-img {
+  width: 20px;
+}
+
+.footer__description {
+  margin-bottom: 1.5rem;
+}
+
+.footer__social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer__social-link {
+  display: inline-flex;
+  background: var(--container-color);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  color: var(--title-color);
+  font-size: 1rem;
+}
+
+.footer__title {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.footer__link {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.footer__link:hover {
+  color: var(--title-color);
+}
+
+.footer__copy {
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* ================= MASKOT ================== */
+
+/* Maskot 1: besar, kanan atas */
 .footer__img-one {
   position: absolute;
   width: 185px;
   top: 6rem;
   right: 2rem;
   margin-top: -100px;
-  margin-right: -10px;
   transform: rotate(-15deg);
   transition: 0.3s;
 }
 
-.footer__img-one:hover {
-  transform: rotate(-15deg) translateY(-0.5rem);
-}
-
-/* Gambar 2 */
+/* Maskot 2: kecil, kiri bawah */
 .footer__img-two {
   position: absolute;
-  width: 20px;
-  bottom: 4rem;
-  right: 2rem;
-  margin-left: 45px;
+  width: 120px;
+  bottom: 2rem;
+  left: 1.5rem;
   transition: 0.3s;
 }
 
-.footer__img-two:hover {
-  transform: translateY(-0.5rem);
-}
-.footer__container{
-  row-gap: 2rem;
-}
+/* ============ RESPONSIVE UNTUK MOBILE ============ */
+@media screen and (max-width: 768px) {
+  /* Maskot 1 disembunyikan */
+  .footer__img-one {
+    display: block;
+    position: absolute;
+    width: 140px;
+    top: 28rem; /* Atur sejajar teks "Layanan" */
+    left: auto;
+    right: 4rem;
+    bottom: auto;
+    transform: rotate(-5deg); 
+  }
 
-.footer__logo{
-  display: flex;
-  align-items: center;
-  column-gap: .5rem;
-  margin-bottom: var(--mb-1);
-  font-weight: var(--font-medium);
-  color: var(--title-color);
-}
+  /* Maskot 2 pindah posisi ke kanan dan atas tengah */
+  .footer__img-two {
+    display: none;
 
-.footer__logo-img{
-  width: 20px;
-}
+  }
 
-.footer__description{
-  margin-bottom: var(--mb-2-5);
-}
-
-.footer__social{
-  display: flex;
-  column-gap: .75rem;
-}
-
-.footer__social-link{
-  display: inline-flex;
-  background: var(--container-color);
-  padding: .25rem;
-  border-radius: .25rem;
-  color: var(--title-color);
-  font-size: 1rem;
-}
-
-.footer__social-link:hover{
-  background: var(--body-color);
-}
-
-.footer__title{
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-1);
-}
-
-.footer__links{
-  display: grid;
-  row-gap: .35rem;
-}
-
-.footer__link{
-  font-size: var(--small-font-size);
-  color: var(--text-color);
-  transition: .3s;
-}
-
-.footer__link:hover{
-  color: var(--title-color);
-}
-
-.footer__copy{
-  display: block;
-  text-align: center;
-  font-size: var(--smaller-font-size);
-  margin-top: 4.5rem;
+  .footer__copy {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
 }
 
 /*=============== SCROLL UP ===============*/
